@@ -1,0 +1,36 @@
+{
+  "name": "sz-sand-amqp",
+  "version": "1.0.0",
+  "description": "Sazze Sand AMQP Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.sazze.com:nodejs/sz-sand-amqp.git"
+  },
+  "keywords": [
+    "Sand",
+    "AMQP"
+  ],
+  "author": "Adam Jaso <ajaso@sazze.com>",
+  "license": "ISC",
+  "dependencies": {
+    "co": "sazze/co",
+    "co-bind": "^1.0.0",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1",
+    "require-all": "^1.1.0",
+    "sand-dollar": "^2.1.1",
+    "sand-grain": "^1.1.1",
+    "sz-amqp": "^1.2.2",
+    "sz-eventsd": "0.0.2"
+  },
+  "devDependencies": {
+    "sand": "^1.2.5"
+  },
+  "publishConfig": {
+    "registry": "http://npm.sazze.com"
+  }
+}
