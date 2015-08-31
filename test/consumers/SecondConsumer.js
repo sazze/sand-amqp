@@ -2,6 +2,9 @@
 
 const Consumer = require('../..').Consumer;
 
+/**
+ * Example of a simple queue consumer handler
+ */
 class SecondConsumer extends Consumer {
   configure() {
     return {
@@ -22,7 +25,7 @@ class SecondConsumer extends Consumer {
   }
 
   *consume(content, channel, message) {
-    console.log(message, '2', this.constructor.name);
+    console.log(content, this.constructor.name)
   }
 }
 
