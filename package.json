@@ -1,6 +1,6 @@
 {
   "name": "sz-sand-amqp",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Sazze Sand AMQP Client",
   "main": "index.js",
   "scripts": {
