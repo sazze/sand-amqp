@@ -2,6 +2,7 @@
 
 const sand = require('sand');
 const amqp = require('..');
+const co = require('co');
 let seed = 0;
 
 module.exports = new sand({log: '*'}).use(amqp)
@@ -10,5 +11,19 @@ module.exports = new sand({log: '*'}).use(amqp)
       let id = seed ++;
       global.sand.amqp.publishers.Test.publish('TO TEST   ' + id);
       global.sand.amqp.publishers.Second.publish('TO SECOND ' + id);
+
+      co(function *() {
+
+        let deployMyname1 = yield global.sand.amqp.publisher('deploy', {
+          exchange: {
+            name: 'amq.direct',
+            type: 'direct'
+          },
+          routingKey: 'myname1'
+        });
+
+        deployMyname1.publish('TO TEST from custom ' + id);
+
+      });
     }, 1000);
   });
