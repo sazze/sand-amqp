@@ -42,8 +42,8 @@ class MultiConsumer extends Consumer {
     ]
   }
 
-  *consume(content, channel, message) {
-    console.log(content, this.constructor.name)
+  *consume() {
+    console.log(this.body, MultiConsumer.name)
   }
 
 }

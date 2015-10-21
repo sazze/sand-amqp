@@ -14,6 +14,9 @@ module.exports = new sand({log: '*'}).use(amqp)
 
       co(function *() {
 
+        let result = yield global.sand.amqp.consumers.RpcClient.send('test.routing.key', 'are you there?', 2000);
+        console.log(result);
+
         let deployMyname1 = yield global.sand.amqp.publisher('deploy', {
           exchange: {
             name: 'amq.direct',
@@ -24,6 +27,6 @@ module.exports = new sand({log: '*'}).use(amqp)
 
         deployMyname1.publish('TO TEST from custom ' + id);
 
-      });
+      }).catch(console.log);
     }, 1000);
   });
