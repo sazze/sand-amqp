@@ -25,7 +25,17 @@ module.exports = new sand({log: '*'}).use(amqp)
           routingKey: 'myname1'
         });
 
-        deployMyname1.publish('TO TEST from custom ' + id);
+        let deployMyname2 = yield global.sand.amqp.publisher({
+          exchange: {
+            name: 'amq.direct',
+            type: 'direct'
+          },
+          routingKey: 'myname1'
+        });
+
+        deployMyname2.publish('TO TEST from custom2 ' + id);
+
+        deployMyname1.publish('TO TEST from custom1 ' + id);
 
       }).catch(console.log);
     }, 1000);
