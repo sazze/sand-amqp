@@ -24,8 +24,15 @@ class TestConsumer extends Consumer {
     }
   }
 
+  bindToContext(ctx) {
+    ctx.tool = 'skilsaw';
+    ctx.on('end', function() {
+      console.log('cleaning up context', TestConsumer.name);
+    });
+  }
+
   *consume() {
-    console.log(this.body, TestConsumer.name)
+    console.log(this.body, this.tool, TestConsumer.name)
   }
 }
 
