@@ -1,6 +1,6 @@
 {
-  "name": "sz-sand-amqp",
-  "version": "2.0.1",
+  "name": "@sazze/sand-amqp",
+  "version": "2.0.2",
   "description": "Sazze Sand AMQP Client",
   "main": "index.js",
   "scripts": {
@@ -8,29 +8,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.sazze.com:nodejs/sz-sand-amqp.git"
+    "url": "git@github.com:sazze/sand-amqp.git"
   },
   "keywords": [
     "Sand",
     "AMQP"
   ],
+  "bugs": {
+    "url": "https://github.com/sazze/sand-amqp/issues"
+  },
   "author": "Adam Jaso <ajaso@sazze.com>",
   "license": "ISC",
   "dependencies": {
-    "co": "sazze/co",
+    "@sazze/amqp": "^1.4.0",
+    "co": "git+https://github.com/sazze/co.git",
     "co-bind": "^1.0.0",
+    "eventsd": "^0.1.2",
     "lodash": "^3.10.1",
     "q": "^1.4.1",
     "require-all": "^1.1.0",
     "sand-dollar": "^2.1.1",
-    "sand-grain": "^1.1.1",
-    "sz-amqp": "^1.2.2",
-    "sz-eventsd": "0.0.2"
+    "sand-grain": "^1.1.1"
   },
   "devDependencies": {
     "sand": "^1.2.5"
-  },
-  "publishConfig": {
-    "registry": "http://npm.sazze.com"
   }
 }
