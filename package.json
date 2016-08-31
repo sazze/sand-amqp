@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@sazze/amqp": "^1.4.0",
-    "co": "sazze/co",
+    "co": "git+https://github.com/sazze/co.git",
     "co-bind": "^1.0.0",
     "eventsd": "^0.1.2",
     "lodash": "^3.10.1",
