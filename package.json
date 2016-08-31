@@ -1,5 +1,5 @@
 {
-  "name": "sz-sand-amqp",
+  "name": "@sazze/sand-amqp",
   "version": "2.0.1",
   "description": "Sazze Sand AMQP Client",
   "main": "index.js",
@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.sazze.com:nodejs/sz-sand-amqp.git"
+    "url": "git@github.com:sazze/sand-amqp.git"
   },
   "keywords": [
     "Sand",
     "AMQP"
   ],
+  "bugs": {
+    "url": "https://github.com/sazze/sand-amqp/issues"
+  },
   "author": "Adam Jaso <ajaso@sazze.com>",
   "license": "ISC",
   "dependencies": {
@@ -29,8 +32,5 @@
   },
   "devDependencies": {
     "sand": "^1.2.5"
-  },
-  "publishConfig": {
-    "registry": "http://npm.sazze.com"
   }
 }
